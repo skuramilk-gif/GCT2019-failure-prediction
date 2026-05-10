@@ -1,0 +1,9 @@
+=== Step3K Leakage Audit (processed tables, GATE) ===
+pattern=D:\pycharmcode\GCT数据集-v2处理\02_processed\step3c_model_input_*_v2.csv
+files_scanned=48
+files_per_set={'base_real': 12, 'derived': 12, 'extended_real': 12, 'workload': 12}
+forbidden_exact=['dt_to_first_fail_us', 'dt_to_next_fail_us', 'event', 'failed', 'failed_count', 'first_fail_us', 'instance_events_type', 'machine_id', 'machine_tmax_us', 'slice_last_time_us', 'split', 't_first_fail_us', 'time_slice']
+forbidden_substrings=['label_fail_']
+required_meta=['meta_machine_id', 'meta_time_slice'] required_label=['label']
+
+✅ PASS: no forbidden columns; required meta/label present in all processed tables.

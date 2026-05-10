@@ -1,0 +1,691 @@
+{
+  "generated_at": "2026-05-08T15:57:01.421344",
+  "root_dir": "D:\\pycharmcode\\GCT数据集-v2处理",
+  "pipeline_version": "v2",
+  "execution_order": [
+    "Step4a_run_core_freeze_v2.py (core freeze: Stage2 clean/split/label + Stage3 features/params/processed + gates)",
+    "Step4b_run_docs_variants_freeze_v2.py (docs freeze: Stage1-3 diagnostics/audit/feature dict)",
+    "Step4c_build_manifest_v2.py (this script: generate reproducibility fingerprint)"
+  ],
+  "environment": {
+    "python": "3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.22621-SP0",
+    "pandas": "2.3.3",
+    "numpy": "2.3.5"
+  },
+  "git_commit": null,
+  "inputs": {
+    "raw": {
+      "path": "borg_traces_data.csv",
+      "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\00_raw\\borg_traces_data.csv",
+      "size_bytes": 328310714,
+      "mtime": "2026-03-09T22:58:34.739804",
+      "sha256": "c3362a78555b7bd10d27a693da4e4c7230ac323359a5bfe0e75340c27b416b0d"
+    },
+    "splits": {
+      "count": 5,
+      "files": [
+        {
+          "path": "step2b_test_machines_v2.txt",
+          "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\03_splits\\step2b_test_machines_v2.txt",
+          "size_bytes": 241231,
+          "mtime": "2026-05-08T15:41:30.988236",
+          "sha256": "cf49c45da8114e58e15dab2d04722e12999f1a8c2823f7b264c69ac8f12177f1"
+        },
+        {
+          "path": "step2b_train_machines_v2.txt",
+          "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\03_splits\\step2b_train_machines_v2.txt",
+          "size_bytes": 845470,
+          "mtime": "2026-05-08T15:41:30.976331",
+          "sha256": "66cfded05b33eb98fd4275f0ac5cf5b0d6cd7d0bc8eb59d52bc7e12514711691"
+        },
+        {
+          "path": "step2b_val_machines_v2.txt",
+          "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\03_splits\\step2b_val_machines_v2.txt",
+          "size_bytes": 120860,
+          "mtime": "2026-05-08T15:41:30.980234",
+          "sha256": "c9dcb39e6327dea679f6bc0927ed27cdd5e506df0397b5016e78668f358ac4bb"
+        },
+        {
+          "path": "step2h2_clusterholdout_test_machines_v2.txt",
+          "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\03_splits\\step2h2_clusterholdout_test_machines_v2.txt",
+          "size_bytes": 281868,
+          "mtime": "2026-05-08T15:51:55.401261",
+          "sha256": "d8fd09db2819251546bbcc8dd7aff00542a322492c6f41ae6c41dceb797f3060"
+        },
+        {
+          "path": "step2h2_clusterholdout_train_machines_v2.txt",
+          "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\03_splits\\step2h2_clusterholdout_train_machines_v2.txt",
+          "size_bytes": 925689,
+          "mtime": "2026-05-08T15:51:55.397260",
+          "sha256": "332398b916061ab2c12156519df3c797c3b1b41e64299b5904b2f8f74a243249"
+        }
+      ]
+    }
+  },
+  "fit_artifacts": {
+    "params": {
+      "count": 1,
+      "files": [
+        {
+          "path": "step3b_preprocess_params_H8h_v2.pkl",
+          "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\04_params\\step3b_preprocess_params_H8h_v2.pkl",
+          "size_bytes": 4664,
+          "mtime": "2026-05-08T15:42:31.993806",
+          "sha256": "011f1742d1bc56b9836395e1c8dc88817ca1d9af6fc81af5970b4bb77e0d40d2"
+        }
+      ]
+    }
+  },
+  "final_artifacts": {
+    "processed_pattern": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_*_v2.csv",
+    "processed_expected_n": 48,
+    "processed_count": 48,
+    "processed_files": [
+      {
+        "path": "step3c_model_input_base_real_H12h_test_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_base_real_H12h_test_v2.csv",
+        "size_bytes": 4661519,
+        "mtime": "2026-05-08T15:43:55.155436",
+        "sha256": "d932d012cbaa550f87539c607db45a647d00eca2c2759ae61da4a693ec3b0b0d"
+      },
+      {
+        "path": "step3c_model_input_base_real_H12h_train_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_base_real_H12h_train_v2.csv",
+        "size_bytes": 16288526,
+        "mtime": "2026-05-08T15:43:39.682060",
+        "sha256": "88aebfd35c9ecbf1dd5ff85a6d126b8b69fc761902769a0087639f9bfc3725b2"
+      },
+      {
+        "path": "step3c_model_input_base_real_H12h_val_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_base_real_H12h_val_v2.csv",
+        "size_bytes": 2342354,
+        "mtime": "2026-05-08T15:43:52.929565",
+        "sha256": "262626f572dffde33d17e24af2b3860651aa40991190d1c3dbdfae3f5460eb62"
+      },
+      {
+        "path": "step3c_model_input_base_real_H4h_test_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_base_real_H4h_test_v2.csv",
+        "size_bytes": 4700726,
+        "mtime": "2026-05-08T15:42:52.373735",
+        "sha256": "2c452308f05a9e390c97a276322dad700bd6f280dd0704c9d020cdae647b51f3"
+      },
+      {
+        "path": "step3c_model_input_base_real_H4h_train_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_base_real_H4h_train_v2.csv",
+        "size_bytes": 16420505,
+        "mtime": "2026-05-08T15:42:36.929630",
+        "sha256": "56cffd110364fe923142ee322e8ab3769e46ed27adc2bc4bb3430aee991ee752"
+      },
+      {
+        "path": "step3c_model_input_base_real_H4h_val_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_base_real_H4h_val_v2.csv",
+        "size_bytes": 2363784,
+        "mtime": "2026-05-08T15:42:50.125828",
+        "sha256": "7188eaca4c8d8d3ef7c8ff99ea87a8d3a141af0a58d6f9d4dc2193450752db31"
+      },
+      {
+        "path": "step3c_model_input_base_real_H6h_test_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_base_real_H6h_test_v2.csv",
+        "size_bytes": 4689538,
+        "mtime": "2026-05-08T15:43:13.255632",
+        "sha256": "f6683ce78a11d9c6badcc40b51bcde350fb85d0d6d1bba588674ad7802c54483"
+      },
+      {
+        "path": "step3c_model_input_base_real_H6h_train_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_base_real_H6h_train_v2.csv",
+        "size_bytes": 16388746,
+        "mtime": "2026-05-08T15:42:57.802036",
+        "sha256": "45f67d1a1ca16974ee90f55a273c550d64e2a30b928ffe33d2572d9271a3d136"
+      },
+      {
+        "path": "step3c_model_input_base_real_H6h_val_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_base_real_H6h_val_v2.csv",
+        "size_bytes": 2359202,
+        "mtime": "2026-05-08T15:43:11.017812",
+        "sha256": "ae2e4d061a75a1d054ce34600a006f34abfa5a9fb9f69db52817fc8ba3601e5d"
+      },
+      {
+        "path": "step3c_model_input_base_real_H8h_test_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_base_real_H8h_test_v2.csv",
+        "size_bytes": 4681289,
+        "mtime": "2026-05-08T15:43:34.231428",
+        "sha256": "4a5621655086c1f9b96f1d4eb3c3459c9026421eba9a8931ee95e90d716402fe"
+      },
+      {
+        "path": "step3c_model_input_base_real_H8h_train_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_base_real_H8h_train_v2.csv",
+        "size_bytes": 16355934,
+        "mtime": "2026-05-08T15:43:18.699154",
+        "sha256": "20c8c04aa869b65bccb312bbcfc74cdb662ace55707b5c65ce4087b57999d8c1"
+      },
+      {
+        "path": "step3c_model_input_base_real_H8h_val_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_base_real_H8h_val_v2.csv",
+        "size_bytes": 2352437,
+        "mtime": "2026-05-08T15:43:31.995616",
+        "sha256": "6ad9a8fb8b3b0b626ffe849402e79e7e3726574243f6dd575c7f59865c08f81c"
+      },
+      {
+        "path": "step3c_model_input_derived_H12h_test_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_derived_H12h_test_v2.csv",
+        "size_bytes": 24683202,
+        "mtime": "2026-05-08T15:43:58.938148",
+        "sha256": "9db33dbc5a273a43c5e1da1180b26b64cc36538d469e2c5f5a2be9706300002f"
+      },
+      {
+        "path": "step3c_model_input_derived_H12h_train_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_derived_H12h_train_v2.csv",
+        "size_bytes": 86264864,
+        "mtime": "2026-05-08T15:43:52.780481",
+        "sha256": "1f16469d289a32fcb7c6f0e9e90a2667b0fcb96f4db50af2b03d1c0a715b1bf0"
+      },
+      {
+        "path": "step3c_model_input_derived_H12h_val_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_derived_H12h_val_v2.csv",
+        "size_bytes": 12410231,
+        "mtime": "2026-05-08T15:43:54.894595",
+        "sha256": "4ea6dfa33739b1468acb6c94943533b803f8ec6de0440ad0cd001951076b4de6"
+      },
+      {
+        "path": "step3c_model_input_derived_H4h_test_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_derived_H4h_test_v2.csv",
+        "size_bytes": 24891149,
+        "mtime": "2026-05-08T15:42:56.187834",
+        "sha256": "c9ee4de9cd2a592715d489701d97b89d3d712f4f3b783415a59025620a79eab2"
+      },
+      {
+        "path": "step3c_model_input_derived_H4h_train_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_derived_H4h_train_v2.csv",
+        "size_bytes": 86965560,
+        "mtime": "2026-05-08T15:42:49.978613",
+        "sha256": "31b253982d4f5af5a19d6077871a097766fe7875c672435ff1bb15f3fc216445"
+      },
+      {
+        "path": "step3c_model_input_derived_H4h_val_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_derived_H4h_val_v2.csv",
+        "size_bytes": 12524825,
+        "mtime": "2026-05-08T15:42:52.114089",
+        "sha256": "f1dc01873e22f9a7fba1dc3484ca6a3b40adfe1bf9788355f35d29809120efd8"
+      },
+      {
+        "path": "step3c_model_input_derived_H6h_test_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_derived_H6h_test_v2.csv",
+        "size_bytes": 24831813,
+        "mtime": "2026-05-08T15:43:17.111796",
+        "sha256": "4075c7d4f084c4d26f7c1f4d070155a3505032e623d363e136001dcaeae10b18"
+      },
+      {
+        "path": "step3c_model_input_derived_H6h_train_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_derived_H6h_train_v2.csv",
+        "size_bytes": 86797826,
+        "mtime": "2026-05-08T15:43:10.869276",
+        "sha256": "cff983f6703f1252316caab23bff40a66a3341f82f6e73763e9c6c87b48997e0"
+      },
+      {
+        "path": "step3c_model_input_derived_H6h_val_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_derived_H6h_val_v2.csv",
+        "size_bytes": 12500171,
+        "mtime": "2026-05-08T15:43:12.992008",
+        "sha256": "dc41408d957ece4463c3438ce7c8242223289731e614cd83b003a98b7e0dcb82"
+      },
+      {
+        "path": "step3c_model_input_derived_H8h_test_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_derived_H8h_test_v2.csv",
+        "size_bytes": 24787682,
+        "mtime": "2026-05-08T15:43:38.078552",
+        "sha256": "2ca6ebe7e8c81c00afcbe90f66330cd094de84ac009afbedc8e1df9082fab784"
+      },
+      {
+        "path": "step3c_model_input_derived_H8h_train_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_derived_H8h_train_v2.csv",
+        "size_bytes": 86623376,
+        "mtime": "2026-05-08T15:43:31.817619",
+        "sha256": "c7d5fb28193d9090c7f8ab2b5532abd38fcfbf259660c2976f358b617799321b"
+      },
+      {
+        "path": "step3c_model_input_derived_H8h_val_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_derived_H8h_val_v2.csv",
+        "size_bytes": 12463515,
+        "mtime": "2026-05-08T15:43:33.972982",
+        "sha256": "145c84f23ea4bf27dced21c6d904069a74ff3049a0b3dcdf2e2911ab23a01281"
+      },
+      {
+        "path": "step3c_model_input_extended_real_H12h_test_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_extended_real_H12h_test_v2.csv",
+        "size_bytes": 23597911,
+        "mtime": "2026-05-08T15:43:56.372356",
+        "sha256": "25a0af40d7373b3dcf9a929e6382b7c2dcc0178e4fa40a74e540719510f646af"
+      },
+      {
+        "path": "step3c_model_input_extended_real_H12h_train_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_extended_real_H12h_train_v2.csv",
+        "size_bytes": 82472577,
+        "mtime": "2026-05-08T15:43:43.920076",
+        "sha256": "76441a8acf3e1a42beb4c884f5b4ea8bcd748795e7ebbcd0fdbbc0bf885b7722"
+      },
+      {
+        "path": "step3c_model_input_extended_real_H12h_val_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_extended_real_H12h_val_v2.csv",
+        "size_bytes": 11864636,
+        "mtime": "2026-05-08T15:43:53.547958",
+        "sha256": "eebbc075026d508a5928461a7a3e414bac0f9930f41164b70a685bb3dd89452b"
+      },
+      {
+        "path": "step3c_model_input_extended_real_H4h_test_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_extended_real_H4h_test_v2.csv",
+        "size_bytes": 23795917,
+        "mtime": "2026-05-08T15:42:53.595408",
+        "sha256": "b780fdc2e673bbde2637faf63d98929bc0b5e9c54f1a678d9172f0d4f26061eb"
+      },
+      {
+        "path": "step3c_model_input_extended_real_H4h_train_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_extended_real_H4h_train_v2.csv",
+        "size_bytes": 83140312,
+        "mtime": "2026-05-08T15:42:41.128497",
+        "sha256": "f54a5423522253bcb21d53193500372a7aab73bcdca802e439ce5272188f82a0"
+      },
+      {
+        "path": "step3c_model_input_extended_real_H4h_val_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_extended_real_H4h_val_v2.csv",
+        "size_bytes": 11973924,
+        "mtime": "2026-05-08T15:42:50.769044",
+        "sha256": "35f238112c86c2f78434a1a37a27111a28ef46539372510f7120d831beca405f"
+      },
+      {
+        "path": "step3c_model_input_extended_real_H6h_test_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_extended_real_H6h_test_v2.csv",
+        "size_bytes": 23739398,
+        "mtime": "2026-05-08T15:43:14.496207",
+        "sha256": "e795f6f95cd8e5832da6e043f0df5bfd4e56173d75a6682433851ec01be3c79f"
+      },
+      {
+        "path": "step3c_model_input_extended_real_H6h_train_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_extended_real_H6h_train_v2.csv",
+        "size_bytes": 82980485,
+        "mtime": "2026-05-08T15:43:02.008322",
+        "sha256": "992b165c769a1036d447a8ade7a5073f00b4c33dc6d2908c22eaaf247c3b73d5"
+      },
+      {
+        "path": "step3c_model_input_extended_real_H6h_val_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_extended_real_H6h_val_v2.csv",
+        "size_bytes": 11950440,
+        "mtime": "2026-05-08T15:43:11.651508",
+        "sha256": "dbc11727d9739eed973478695eacfc71eb4276211310d7ffdb3c1fdf01677353"
+      },
+      {
+        "path": "step3c_model_input_extended_real_H8h_test_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_extended_real_H8h_test_v2.csv",
+        "size_bytes": 23697348,
+        "mtime": "2026-05-08T15:43:35.458176",
+        "sha256": "cd5ccb397ad6a69d5cad0621291f0bd3570c3774ce33fa800487a198f4904e81"
+      },
+      {
+        "path": "step3c_model_input_extended_real_H8h_train_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_extended_real_H8h_train_v2.csv",
+        "size_bytes": 82814192,
+        "mtime": "2026-05-08T15:43:22.937105",
+        "sha256": "33318fa6935671f188f1a69fbaa5b7f43be08c3cb206885afa4e6800cc9bdee1"
+      },
+      {
+        "path": "step3c_model_input_extended_real_H8h_val_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_extended_real_H8h_val_v2.csv",
+        "size_bytes": 11915426,
+        "mtime": "2026-05-08T15:43:32.628073",
+        "sha256": "2180b7763aae96b3bf9c8342c18077138c083b01614167e9c0560bb017ee6e54"
+      },
+      {
+        "path": "step3c_model_input_workload_H12h_test_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_workload_H12h_test_v2.csv",
+        "size_bytes": 24137339,
+        "mtime": "2026-05-08T15:43:57.637376",
+        "sha256": "a69a8d35569205e6764ba9908cbd05b5b47b8311d44c706c3af2882880a831c8"
+      },
+      {
+        "path": "step3c_model_input_workload_H12h_train_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_workload_H12h_train_v2.csv",
+        "size_bytes": 84356693,
+        "mtime": "2026-05-08T15:43:48.333686",
+        "sha256": "f0fa88f7d443f6f32e59c55f16b1ace1fdab7b1e9f189686a8e8488c2dcb28a1"
+      },
+      {
+        "path": "step3c_model_input_workload_H12h_val_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_workload_H12h_val_v2.csv",
+        "size_bytes": 12135600,
+        "mtime": "2026-05-08T15:43:54.203917",
+        "sha256": "568841d0a928f808c7af3754d8d3a9d2cc5dd80c8c1fc49ad9f9de8bfe5c0040"
+      },
+      {
+        "path": "step3c_model_input_workload_H4h_test_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_workload_H4h_test_v2.csv",
+        "size_bytes": 24339745,
+        "mtime": "2026-05-08T15:42:54.877024",
+        "sha256": "f3f5ccd8e75ac794c7d25c91c51d7a3e01bdd41ba7fce506a6e3619fd52963f4"
+      },
+      {
+        "path": "step3c_model_input_workload_H4h_train_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_workload_H4h_train_v2.csv",
+        "size_bytes": 85039292,
+        "mtime": "2026-05-08T15:42:45.506257",
+        "sha256": "b0fe10c8e3ea11467e48954a23c93b535679f32e92c3394c1a8b109c87507c6e"
+      },
+      {
+        "path": "step3c_model_input_workload_H4h_val_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_workload_H4h_val_v2.csv",
+        "size_bytes": 12247304,
+        "mtime": "2026-05-08T15:42:51.436618",
+        "sha256": "8b0014f8207c1dca4bbd47ebb63aff4e08e7cf587c0ab9e2e30b716bc19e40ff"
+      },
+      {
+        "path": "step3c_model_input_workload_H6h_test_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_workload_H6h_test_v2.csv",
+        "size_bytes": 24281978,
+        "mtime": "2026-05-08T15:43:15.776890",
+        "sha256": "93d008d34f80b1891290ed195dacb506e8b7db3caa84739f226ff19afa959e90"
+      },
+      {
+        "path": "step3c_model_input_workload_H6h_train_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_workload_H6h_train_v2.csv",
+        "size_bytes": 84875913,
+        "mtime": "2026-05-08T15:43:06.373405",
+        "sha256": "b1d1f9791868b71bdd8ff83bf43b62bc100e076a63c9fde9dacccac2ae89e858"
+      },
+      {
+        "path": "step3c_model_input_workload_H6h_val_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_workload_H6h_val_v2.csv",
+        "size_bytes": 12223308,
+        "mtime": "2026-05-08T15:43:12.309660",
+        "sha256": "cd8646c9b1b75ec41b625f6e82e9e702dfaf7630bd6cd48602de70ee22b7746a"
+      },
+      {
+        "path": "step3c_model_input_workload_H8h_test_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_workload_H8h_test_v2.csv",
+        "size_bytes": 24238984,
+        "mtime": "2026-05-08T15:43:36.749975",
+        "sha256": "3ccd63404fb49880be6bed28e540f16581adc0effd91264d5876fbcf85837293"
+      },
+      {
+        "path": "step3c_model_input_workload_H8h_train_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_workload_H8h_train_v2.csv",
+        "size_bytes": 84705940,
+        "mtime": "2026-05-08T15:43:27.317535",
+        "sha256": "4e64967b4ec95b0b7942d7631420ba85ea311db5a26092895f775568973c05a4"
+      },
+      {
+        "path": "step3c_model_input_workload_H8h_val_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\02_processed\\step3c_model_input_workload_H8h_val_v2.csv",
+        "size_bytes": 12187526,
+        "mtime": "2026-05-08T15:43:33.290419",
+        "sha256": "79a2172733fcfae032ed348fe36c4cc42a9c15dab86e73147bee5fdeb539e006"
+      }
+    ]
+  },
+  "evidence_reports": {
+    "required_files": [
+      "step4a_run_core_freeze_v2_latest.log",
+      "step4b_run_docs_variants_freeze_v2_latest.log",
+      "step0_stage1_3_summary_v2.txt",
+      "step2d_label_qc_summary_trainval_v2.csv",
+      "step2e_time_order_qc_summary_v2.txt",
+      "step2c_label_summary_FAILonly_multiH_v2.csv",
+      "step2h_cpu_distribution_audit_report_v2.txt",
+      "step3d_schema_check_v2.txt",
+      "step3j_sched_frac_simplex_qc_v2.txt",
+      "step3k_leakage_audit_v2.txt",
+      "step3k2_fit_domain_audit_v2.txt",
+      "step3b_preprocess_fit_summary_H8h_v2.txt",
+      "step3c_export_summary_multiH_v2.csv"
+    ],
+    "files": [
+      {
+        "path": "step4a_run_core_freeze_v2_latest.log",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\05_reports\\step4a_run_core_freeze_v2_latest.log",
+        "size_bytes": 27595,
+        "mtime": "2026-05-08T15:44:25.420495",
+        "sha256": "4c54b61f4c69b2a0d6e98c5bbd6b307993ed549c416c20048c1136ca7ba5edc9"
+      },
+      {
+        "path": "step4b_run_docs_variants_freeze_v2_latest.log",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\05_reports\\step4b_run_docs_variants_freeze_v2_latest.log",
+        "size_bytes": 50194,
+        "mtime": "2026-05-08T15:52:00.999215",
+        "sha256": "d50deb44ee8662ced14e3b85f2378b7af312b04e578098665ae366813bf5f21b"
+      },
+      {
+        "path": "step0_stage1_3_summary_v2.txt",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\05_reports\\step0_stage1_3_summary_v2.txt",
+        "size_bytes": 17983,
+        "mtime": "2026-05-08T15:52:00.950609",
+        "sha256": "8589228c70478f1738f23652d30a7b25b3be4390eeb742ceb8cba25d60e5baca"
+      },
+      {
+        "path": "step2d_label_qc_summary_trainval_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\05_reports\\step2d_label_qc_summary_trainval_v2.csv",
+        "size_bytes": 893,
+        "mtime": "2026-05-08T15:41:54.170005",
+        "sha256": "ab2493b0de18179d622a5c6a2e7cf3cfc334bfbf21eb36c7e7235e0a52b37ecd"
+      },
+      {
+        "path": "step2e_time_order_qc_summary_v2.txt",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\05_reports\\step2e_time_order_qc_summary_v2.txt",
+        "size_bytes": 1333,
+        "mtime": "2026-05-08T15:41:55.713276",
+        "sha256": "9f9f0323d9da5d2d3b0cfb8b9851809ea9374bbb9e2229b74d310064e18507d6"
+      },
+      {
+        "path": "step2c_label_summary_FAILonly_multiH_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\05_reports\\step2c_label_summary_FAILonly_multiH_v2.csv",
+        "size_bytes": 1348,
+        "mtime": "2026-05-08T15:41:49.872535",
+        "sha256": "fd41d84dc642d42838a40bf6f9aa962249b59df1e3b2ca2f16935b6fdb636a97"
+      },
+      {
+        "path": "step2h_cpu_distribution_audit_report_v2.txt",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\05_reports\\step2h_cpu_distribution_audit_report_v2.txt",
+        "size_bytes": 1509,
+        "mtime": "2026-05-08T15:51:53.036011",
+        "sha256": "788ce165afbf20462303cbe8fb444979d205fe14cc50ca7883b6c4544260e3c2"
+      },
+      {
+        "path": "step3d_schema_check_v2.txt",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\05_reports\\step3d_schema_check_v2.txt",
+        "size_bytes": 679,
+        "mtime": "2026-05-08T15:44:20.231259",
+        "sha256": "032bd1c7f219d86833615c32c8fe02038afdbc2ff68d4cae4d51ced35d048a7e"
+      },
+      {
+        "path": "step3j_sched_frac_simplex_qc_v2.txt",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\05_reports\\step3j_sched_frac_simplex_qc_v2.txt",
+        "size_bytes": 338,
+        "mtime": "2026-05-08T15:42:27.666533",
+        "sha256": "13c783dad1df16d1ec4e2cabe5a194785de029ae6a1d8792ec6dea16f9e94330"
+      },
+      {
+        "path": "step3k_leakage_audit_v2.txt",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\05_reports\\step3k_leakage_audit_v2.txt",
+        "size_bytes": 684,
+        "mtime": "2026-05-08T15:44:20.870682",
+        "sha256": "6d3d70faf2c86535651babc8f3ea551c9477865f4acbd2a150c4566eae7eeffb"
+      },
+      {
+        "path": "step3k2_fit_domain_audit_v2.txt",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\05_reports\\step3k2_fit_domain_audit_v2.txt",
+        "size_bytes": 1388,
+        "mtime": "2026-05-08T15:44:24.896054",
+        "sha256": "95a62aa099e867360c3bad7461fd01cef5c7ca04288ed8ba844e02034fe03a25"
+      },
+      {
+        "path": "step3b_preprocess_fit_summary_H8h_v2.txt",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\05_reports\\step3b_preprocess_fit_summary_H8h_v2.txt",
+        "size_bytes": 1328,
+        "mtime": "2026-05-08T15:42:32.044816",
+        "sha256": "7b3262d4c6f6b4d4ba5f7ded72cc09f89af64eea9399f93deb8730f833b5f5ba"
+      },
+      {
+        "path": "step3c_export_summary_multiH_v2.csv",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\05_reports\\step3c_export_summary_multiH_v2.csv",
+        "size_bytes": 354,
+        "mtime": "2026-04-30T19:34:07.140605",
+        "sha256": "5efd48f7eed91c163b9d9ea667f29dcbf9fcebd1ab4b9896428a38402da798d3"
+      }
+    ],
+    "count": 13
+  },
+  "code_fingerprint": {
+    "required_files": [
+      "Step2a_machine_slice主表构建_clean_v2.py",
+      "Step2b_训练验证测试机器划分与固化_v2.py",
+      "Step2c_预警标签生成_FAILonly_多窗口_v2.py",
+      "Step2d_标签与样本质量检查_汇总报告_v2.py",
+      "Step2e_time_order_qc_v2.py",
+      "Step3a_派生特征构造_v2.py",
+      "Step3a_aux_raw_cpu_dist_vector_merge_v2.py",
+      "Step3b_preprocess参数拟合_trainonly_H8h_v2.py",
+      "Step3c_transform导出模型输入表_multiH_v2.py",
+      "Step3d_输入表健康检查与稀疏性报告_v2.py",
+      "step3j_sched_frac_simplex_qc_v2.py",
+      "Step3k_leakage_audit_processed_v2.py",
+      "Step3k2_fit_domain_audit_v2.py",
+      "Step3i_feature_dictionary_final_allsets_v2.py",
+      "Step0_stage1-3_summary_report_v2.py",
+      "Step4a_run_core_freeze_v2.py",
+      "Step4b_run_docs_variants_freeze_v2.py",
+      "Step4c_build_manifest_v2.py"
+    ],
+    "files": [
+      {
+        "path": "Step2a_machine_slice主表构建_clean_v2.py",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\Step2a_machine_slice主表构建_clean_v2.py",
+        "size_bytes": 21264,
+        "mtime": "2026-05-02T21:41:48.263801",
+        "sha256": "ae4785a0f0c3ac37d7ea31e8d6acf64f93d41eca49bf0432435e436a72d696a6"
+      },
+      {
+        "path": "Step2b_训练验证测试机器划分与固化_v2.py",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\Step2b_训练验证测试机器划分与固化_v2.py",
+        "size_bytes": 12687,
+        "mtime": "2026-05-02T21:57:34.686501",
+        "sha256": "d3b5a30c9288bb8a502f8ba78ac282eb131b42d895f96eab42c2b8ffc55d65e3"
+      },
+      {
+        "path": "Step2c_预警标签生成_FAILonly_多窗口_v2.py",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\Step2c_预警标签生成_FAILonly_多窗口_v2.py",
+        "size_bytes": 12726,
+        "mtime": "2026-05-02T22:17:05.980444",
+        "sha256": "9bb248f9308ce340fc8bea441cfbbd5fb52c17daaaf8f375e8214c3b09fd3aab"
+      },
+      {
+        "path": "Step2d_标签与样本质量检查_汇总报告_v2.py",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\Step2d_标签与样本质量检查_汇总报告_v2.py",
+        "size_bytes": 9821,
+        "mtime": "2026-05-02T22:39:15.363476",
+        "sha256": "51c2841accae8eea2f6e75bfe28bb36c5b4d821ef0a6835ab6f7136d0a2f0244"
+      },
+      {
+        "path": "Step2e_time_order_qc_v2.py",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\Step2e_time_order_qc_v2.py",
+        "size_bytes": 13117,
+        "mtime": "2026-05-02T22:43:40.556486",
+        "sha256": "3cf3a998fa4a1b37a6e6df3608a4dee62f5795de478491367c742dbe05d89015"
+      },
+      {
+        "path": "Step3a_派生特征构造_v2.py",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\Step3a_派生特征构造_v2.py",
+        "size_bytes": 3948,
+        "mtime": "2026-05-06T15:43:02.691011",
+        "sha256": "7ff77aaef7f258e8759aac014391427de500cc015198a89512ee8c4f336af90b"
+      },
+      {
+        "path": "Step3a_aux_raw_cpu_dist_vector_merge_v2.py",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\Step3a_aux_raw_cpu_dist_vector_merge_v2.py",
+        "size_bytes": 17262,
+        "mtime": "2026-05-06T20:53:29.292659",
+        "sha256": "1aff09fbaf61980ca44bc7bcd7983df704fe8af69abbd7a7a17cdc85588567fb"
+      },
+      {
+        "path": "Step3b_preprocess参数拟合_trainonly_H8h_v2.py",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\Step3b_preprocess参数拟合_trainonly_H8h_v2.py",
+        "size_bytes": 9287,
+        "mtime": "2026-05-06T17:16:27.263519",
+        "sha256": "46669e5e1954ec7399a90c3614659a2991771c0b922125b9c24921aaee162d48"
+      },
+      {
+        "path": "Step3c_transform导出模型输入表_multiH_v2.py",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\Step3c_transform导出模型输入表_multiH_v2.py",
+        "size_bytes": 9652,
+        "mtime": "2026-05-06T20:57:23.119214",
+        "sha256": "2e18a0c64791d4e589ff92b0a5c2b25519c8c59c8e6b8858473c469b79ced766"
+      },
+      {
+        "path": "Step3d_输入表健康检查与稀疏性报告_v2.py",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\Step3d_输入表健康检查与稀疏性报告_v2.py",
+        "size_bytes": 5569,
+        "mtime": "2026-04-11T21:38:40.126689",
+        "sha256": "7f483733b3eb02540f23e43bafe097bc91faee6efcd8a15db950ab213f47e106"
+      },
+      {
+        "path": "step3j_sched_frac_simplex_qc_v2.py",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\step3j_sched_frac_simplex_qc_v2.py",
+        "size_bytes": 3120,
+        "mtime": "2026-05-01T21:53:06.743444",
+        "sha256": "0eb535917eba531d4d6a393c5f4e0fd9734d2c40d11968918e68562776c83a1e"
+      },
+      {
+        "path": "Step3k_leakage_audit_processed_v2.py",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\Step3k_leakage_audit_processed_v2.py",
+        "size_bytes": 6890,
+        "mtime": "2026-05-06T22:24:52.228675",
+        "sha256": "2346069db62b30831ebe6d3219c425d5c67a93674030effbfc1a1eb79b3447ae"
+      },
+      {
+        "path": "Step3k2_fit_domain_audit_v2.py",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\Step3k2_fit_domain_audit_v2.py",
+        "size_bytes": 10507,
+        "mtime": "2026-05-08T12:09:07.054770",
+        "sha256": "7e4d8c7068d0e85164d8e8ea9953c35a5c8c38c4a27906abe205b7cc9269d830"
+      },
+      {
+        "path": "Step3i_feature_dictionary_final_allsets_v2.py",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\Step3i_feature_dictionary_final_allsets_v2.py",
+        "size_bytes": 8505,
+        "mtime": "2026-05-06T21:11:21.639399",
+        "sha256": "8b616da4407c8217e534f00b123503f588690a8c70b461cf2c0b9c0b5fa2c15d"
+      },
+      {
+        "path": "Step0_stage1-3_summary_report_v2.py",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\Step0_stage1-3_summary_report_v2.py",
+        "size_bytes": 10268,
+        "mtime": "2026-05-02T17:24:39.213746",
+        "sha256": "afa1719d329121bb655c93973f5e069ee9d48ad5abeaa9f2a8dff3ed3d8aeac1"
+      },
+      {
+        "path": "Step4a_run_core_freeze_v2.py",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\Step4a_run_core_freeze_v2.py",
+        "size_bytes": 9803,
+        "mtime": "2026-05-08T15:56:21.134518",
+        "sha256": "1e99d289522f39f7d8c64f276afceedc7bb2222d9592a9c010b7236fc30a563c"
+      },
+      {
+        "path": "Step4b_run_docs_variants_freeze_v2.py",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\Step4b_run_docs_variants_freeze_v2.py",
+        "size_bytes": 9327,
+        "mtime": "2026-05-08T15:55:26.718057",
+        "sha256": "aaec3943453c9eedfacca84741f9bc7bde0c5fd9ea5b7e60c64e9ef914e71f55"
+      },
+      {
+        "path": "Step4c_build_manifest_v2.py",
+        "full_path": "D:\\pycharmcode\\GCT数据集-v2处理\\Step4c_build_manifest_v2.py",
+        "size_bytes": 12774,
+        "mtime": "2026-05-08T11:30:23.637540",
+        "sha256": "578103c9aaf970bd5a9509f446f4c285557f278e7d36df0c049b482504129c11"
+      }
+    ],
+    "count": 18
+  },
+  "pipeline_logs": {
+    "step4a_core_freeze_alias": "D:\\pycharmcode\\GCT数据集-v2处理\\05_reports\\step4a_run_core_freeze_v2_latest.log",
+    "step4a_core_freeze_exists": true,
+    "step4b_docs_freeze_alias": "D:\\pycharmcode\\GCT数据集-v2处理\\05_reports\\step4b_run_docs_variants_freeze_v2_latest.log",
+    "step4b_docs_freeze_exists": true
+  }
+}

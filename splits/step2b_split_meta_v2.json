@@ -1,0 +1,10 @@
+{
+  "random_seed": 42,
+  "train_ratio": 0.7,
+  "val_ratio": 0.1,
+  "test_ratio": 0.2,
+  "machines_total": 95947,
+  "machines_train": 67162,
+  "machines_val": 9594,
+  "machines_test": 19191
+}

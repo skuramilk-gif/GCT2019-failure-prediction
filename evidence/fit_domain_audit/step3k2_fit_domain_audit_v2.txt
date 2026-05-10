@@ -1,0 +1,30 @@
+=== Step3K2 Fit-domain audit (v2, GATE) ===
+
+[Inputs]
+features_raw=D:\pycharmcode\GCT数据集-v2处理\01_interim\step3a_features_raw_v2.csv
+label_H8=D:\pycharmcode\GCT数据集-v2处理\01_interim\step2c_machine_slice_labeled_FAILonly_H8h_v2.csv
+train_machines=D:\pycharmcode\GCT数据集-v2处理\03_splits\step2b_train_machines_v2.txt
+params_pkl=D:\pycharmcode\GCT数据集-v2处理\04_params\step3b_preprocess_params_H8h_v2.pkl
+processed_schema(optional)=D:\pycharmcode\GCT数据集-v2处理\02_processed\step3c_model_input_derived_H8h_train_v2.csv  status=OK
+
+[Hashes]
+sha256(train_machines_list)=0a13223ce7daf660a6fca1f76642fd84ddbf644d4ac87f1c29973aadd19aa325
+sha256(params_pkl_file)=011f1742d1bc56b9836395e1c8dc88817ca1d9af6fc81af5970b4bb77e0d40d2
+
+[Fit domain recomputed from data]
+fit_rows(split=train & label_notna)=118230
+fit_pos=2158
+fit_machines=56372
+Gate: fit_machines ⊆ train_machines  -> PASS
+
+[Params schema]
+feature_cols_n=60
+Gate: params.feature_cols == expected_feature_cols(order-sensitive) -> PASS
+Gate: no forbidden columns in params.feature_cols -> PASS
+Gate: params numeric sanity (finite, hi>=lo, iqr>0) -> PASS
+
+[Param directory scan]
+04_params_pkl_files=['step3b_preprocess_params_H8h_v2.pkl']
+Gate: no unexpected pkl artifacts -> PASS
+
+✅ PASS: train-only fit domain verified; params schema verified; no extra fit artifacts.

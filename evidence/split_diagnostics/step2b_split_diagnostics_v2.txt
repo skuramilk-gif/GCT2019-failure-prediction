@@ -1,0 +1,29 @@
+=== Step2B(v2) split diagnostics ===
+{
+  "random_seed": 42,
+  "train_ratio": 0.7,
+  "val_ratio": 0.1,
+  "test_ratio": 0.2,
+  "machines_total": 95947,
+  "machines_train": 67162,
+  "machines_val": 9594,
+  "machines_test": 19191
+}
+
+[train] machines=67162, rows=239105, fail_machines=39011, fail_machine_rate=0.5808, slices_per_machine_median=4
+  time_coverage: slice_min_median=1605, slice_max_median=6707, span_slices_median=4568, span_slices_p25=2753
+  slice_count describe:
+    mean=3.5601, std=1.1306, min=1, p50=4,  max=17
+    full={'count': 67162.0, 'mean': 3.560123283999881, 'std': 1.130618086940161, 'min': 1.0, '25%': 3.0, '50%': 4.0, '75%': 4.0, 'max': 17.0}
+
+[val] machines=9594, rows=34041, fail_machines=5478, fail_machine_rate=0.5710, slices_per_machine_median=4
+  time_coverage: slice_min_median=1655, slice_max_median=6710, span_slices_median=4552, span_slices_p25=2759
+  slice_count describe:
+    mean=3.5482, std=1.1229, min=1, p50=4,  max=8
+    full={'count': 9594.0, 'mean': 3.548155096935585, 'std': 1.1229183966573542, 'min': 1.0, '25%': 3.0, '50%': 4.0, '75%': 4.0, 'max': 8.0}
+
+[test] machines=19191, rows=68145, fail_machines=11084, fail_machine_rate=0.5776, slices_per_machine_median=4
+  time_coverage: slice_min_median=1656, slice_max_median=6729, span_slices_median=4534, span_slices_p25=2747
+  slice_count describe:
+    mean=3.5509, std=1.1324, min=1, p50=4,  max=12
+    full={'count': 19191.0, 'mean': 3.5508832265124277, 'std': 1.132357534848431, 'min': 1.0, '25%': 3.0, '50%': 4.0, '75%': 4.0, 'max': 12.0}

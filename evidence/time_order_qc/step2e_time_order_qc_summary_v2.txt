@@ -1,0 +1,29 @@
+=== Step2E(v2) Time Order QC Summary ===
+rows=341291, machines=95947
+
+[Key integrity]
+duplicate_keys(machine_id,time_slice)=0
+time_slice_mismatch( slice_last_time_us//SLICE_US != time_slice )=0
+
+[Monotonicity checks within machine (sorted by time_slice)]
+non_positive_diff_time_slice_count=0  (should be 0 if key unique & sorted)
+negative_diff_slice_last_time_us_count=0  (should be 0; otherwise label risk)
+zero_diff_slice_last_time_us_count=0     (ideally 0; ties may indicate duplicates)
+machines_with_any_negative_dt=0 / 95947 = 0.000000
+machines_with_any_zero_dt=0 / 95947 = 0.000000
+
+[Positive dt (slice_last_time_us) gap distribution (hours) — reflects observation sparsity]
+pos_dt_count=245344
+quantiles_hours={0.5: 110.38923642083333, 0.9: 320.6777151625835, 0.95: 396.1685496015551, 0.99: 543.3251465092111}
+mean_hours=143.9177
+std_hours=124.9305
+min_hours=0.0021
+max_hours=729.9390
+
+[Delta end: fixed_slice_end - slice_last_time_us (seconds)]
+delta_end_negative_count=0
+quantiles_seconds={0.5: 152.835325, 0.9: 277.183984, 0.95: 285.964243, 0.99: 296.5538889, 1.0: 299.999173}
+
+[Outputs]
+machine_level_csv=D:\pycharmcode\GCT数据集-v2处理\05_reports\step2e_time_order_qc_machinelevel_v2.csv
+examples_csv=D:\pycharmcode\GCT数据集-v2处理\05_reports\step2e_time_order_qc_examples_v2.csv

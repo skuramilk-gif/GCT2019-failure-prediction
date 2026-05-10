@@ -1,0 +1,58 @@
+# =============================================================================
+# GCT2019 Failure Prediction - Global Configuration
+# =============================================================================
+# This file defines all global settings for the data processing pipeline.
+# Each stage's script reads its required parameters from here.
+# =============================================================================
+
+# ----------------------------- Project Info ----------------------------------
+project:
+  name: "GCT2019 Machine-Level Failure Prediction"
+  version: "v2.0"
+  author: "Your Name"
+  description: >
+    Production-grade data processing pipeline for machine-level
+    failure prediction on the Google Cluster Trace 2019 (GCT2019)
+    dataset. The pipeline enforces a Core / Gate / Docs architecture
+    to ensure full reproducibility, leakage prevention, and auditability.
+
+# ----------------------------- Data Paths ------------------------------------
+data:
+  raw_data: "00_raw/borg_traces_data.csv"
+  interim_dir: "01_interim/"
+  processed_dir: "02_processed/"
+  splits_dir: "03_splits/"
+  params_dir: "04_params/"
+  reports_dir: "05_reports/"
+
+# ----------------------------- Labeling --------------------------------------
+label:
+  prediction_window_H: 8                 # hours (main task)
+  prediction_windows_aux: [4, 6, 8, 12]  # multi-H auxiliary tasks
+  slice_duration_seconds: 300
+  task_type: "FAIL-only first-occurrence"
+  description: >
+    Positive label = the machine's FIRST FAIL event falls within
+    (t, t+H]. All slices at or after the first FAIL are excluded.
+    Right-censored samples (t+H > t_max) are excluded.
+
+# ----------------------------- Preprocessing --------------------------------
+preprocess:
+  params_file: "04_params/step3b_preprocess_params_H8h_v2.pkl"
+  fit_domain: "train ∩ label_valid_H8h"
+  description: >
+    All imputation / clipping / scaling parameters are fitted on the
+    training split only (train ∩ label_valid domain). Validation and
+    test splits only apply the transform.
+
+# ----------------------------- Reproducibility ------------------------------
+reproducibility:
+  random_seed: 42
+  split_meta: "03_splits/step2b_split_meta_v2.json"
+
+# ----------------------------- Other Settings -------------------------------
+other:
+  sched_frac_reference_class: 3
+  cpu_dist_dim: 11
+  tail_cpu_dist_dim: 9
+

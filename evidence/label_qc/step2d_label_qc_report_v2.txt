@@ -1,0 +1,169 @@
+=== Step2D(v2) Label QC Report ===
+
+------------------------------------------------------------------------------------------
+[H=4h] file=D:\pycharmcode\GCT数据集-v2处理\01_interim\step2c_machine_slice_labeled_FAILonly_H4h_v2.csv
+{'H_hours': 4, 'rows_total': 341291, 'valid_rows': 169749, 'valid_rate': 0.4973732093726468, 'pos_count': 1748, 'pos_rate': 0.010297556981189875, 'train_valid_rows': 118682, 'train_pos_count': 1196, 'train_pos_rate': 0.010077349555956253, 'val_valid_rows': 17082, 'val_pos_count': 174, 'val_pos_rate': 0.010186160871092378, 'test_valid_rows': 33985, 'test_pos_count': 378, 'test_pos_rate': 0.011122554067971163, 'per_machine_valid_p50': 2.0, 'per_machine_valid_p90': 3.0, 'per_machine_posrate_p50': 0.0, 'per_machine_posrate_p90': 0.0}
+train/val/test stats:
+  train={'rows': 239105, 'valid_rows': 118682, 'valid_rate': 0.49635934003889504, 'pos_count': 1196, 'pos_rate': 0.010077349555956253}
+  val  ={'rows': 34041, 'valid_rows': 17082, 'valid_rate': 0.5018066449281748, 'pos_count': 174, 'pos_rate': 0.010186160871092378}
+  test ={'rows': 68145, 'valid_rows': 33985, 'valid_rate': 0.4987159732922445, 'pos_count': 378, 'pos_rate': 0.011122554067971163}
+per-machine valid sample count describe:
+count    80780.000000
+mean         2.101374
+std          0.936309
+min          1.000000
+50%          2.000000
+90%          3.000000
+95%          4.000000
+99%          4.000000
+max          8.000000
+Name: label_fail_H4h, dtype: float64
+per-machine pos rate describe:
+count    80780.000000
+mean         0.012403
+std          0.093958
+min          0.000000
+50%          0.000000
+90%          0.000000
+95%          0.000000
+99%          0.500000
+max          1.000000
+Name: label_fail_H4h, dtype: float64
+head(10):
+ machine_id  time_slice  slice_last_time_us  failed_count split  label_fail_H4h
+          4        2008        602530871574             1 train             NaN
+          4        2287        686252519087             0 train             NaN
+          4        6872       2061781875551             0 train             NaN
+          6        1078        323595709023             0 train             0.0
+          6        1770        531127155518             0 train             0.0
+          6        2054        616426140802             0 train             0.0
+          6        2142        642762537444             1 train             NaN
+          6        2382        714676243991             0 train             NaN
+          6        3271        981569939135             0 train             NaN
+          6        4763       1429033064420             0 train             NaN
+
+------------------------------------------------------------------------------------------
+[H=6h] file=D:\pycharmcode\GCT数据集-v2处理\01_interim\step2c_machine_slice_labeled_FAILonly_H6h_v2.csv
+{'H_hours': 6, 'rows_total': 341291, 'valid_rows': 169417, 'valid_rate': 0.4964004324755121, 'pos_count': 2427, 'pos_rate': 0.01432559896586529, 'train_valid_rows': 118460, 'train_pos_count': 1684, 'train_pos_rate': 0.014215769035961506, 'val_valid_rows': 17050, 'val_pos_count': 232, 'val_pos_rate': 0.013607038123167155, 'test_valid_rows': 33907, 'test_pos_count': 511, 'test_pos_rate': 0.015070634382280944, 'per_machine_valid_p50': 2.0, 'per_machine_valid_p90': 3.0, 'per_machine_posrate_p50': 0.0, 'per_machine_posrate_p90': 0.0}
+train/val/test stats:
+  train={'rows': 239105, 'valid_rows': 118460, 'valid_rate': 0.4954308776478953, 'pos_count': 1684, 'pos_rate': 0.014215769035961506}
+  val  ={'rows': 34041, 'valid_rows': 17050, 'valid_rate': 0.500866602038718, 'pos_count': 232, 'pos_rate': 0.013607038123167155}
+  test ={'rows': 68145, 'valid_rows': 33907, 'valid_rate': 0.49757135519847384, 'pos_count': 511, 'pos_rate': 0.015070634382280944}
+per-machine valid sample count describe:
+count    80701.000000
+mean         2.099317
+std          0.936477
+min          1.000000
+50%          2.000000
+90%          3.000000
+95%          4.000000
+99%          4.000000
+max          8.000000
+Name: label_fail_H6h, dtype: float64
+per-machine pos rate describe:
+count    80701.000000
+mean         0.017096
+std          0.110045
+min          0.000000
+50%          0.000000
+90%          0.000000
+95%          0.000000
+99%          0.500000
+max          1.000000
+Name: label_fail_H6h, dtype: float64
+head(10):
+ machine_id  time_slice  slice_last_time_us  failed_count split  label_fail_H6h
+          4        2008        602530871574             1 train             NaN
+          4        2287        686252519087             0 train             NaN
+          4        6872       2061781875551             0 train             NaN
+          6        1078        323595709023             0 train             0.0
+          6        1770        531127155518             0 train             0.0
+          6        2054        616426140802             0 train             0.0
+          6        2142        642762537444             1 train             NaN
+          6        2382        714676243991             0 train             NaN
+          6        3271        981569939135             0 train             NaN
+          6        4763       1429033064420             0 train             NaN
+
+------------------------------------------------------------------------------------------
+[H=8h] file=D:\pycharmcode\GCT数据集-v2处理\01_interim\step2c_machine_slice_labeled_FAILonly_H8h_v2.csv
+{'H_hours': 8, 'rows_total': 341291, 'valid_rows': 169080, 'valid_rate': 0.4954130053239025, 'pos_count': 3089, 'pos_rate': 0.018269458244617932, 'train_valid_rows': 118230, 'train_pos_count': 2158, 'train_pos_rate': 0.01825255857227438, 'val_valid_rows': 17002, 'val_pos_count': 294, 'val_pos_rate': 0.01729208328431949, 'test_valid_rows': 33848, 'test_pos_count': 637, 'test_pos_rate': 0.018819428031198297, 'per_machine_valid_p50': 2.0, 'per_machine_valid_p90': 3.0, 'per_machine_posrate_p50': 0.0, 'per_machine_posrate_p90': 0.0}
+train/val/test stats:
+  train={'rows': 239105, 'valid_rows': 118230, 'valid_rate': 0.4944689571527153, 'pos_count': 2158, 'pos_rate': 0.01825255857227438}
+  val  ={'rows': 34041, 'valid_rows': 17002, 'valid_rate': 0.49945653770453274, 'pos_count': 294, 'pos_rate': 0.01729208328431949}
+  test ={'rows': 68145, 'valid_rows': 33848, 'valid_rate': 0.496705554332673, 'pos_count': 637, 'pos_rate': 0.018819428031198297}
+per-machine valid sample count describe:
+count    80610.000000
+mean         2.097507
+std          0.936771
+min          1.000000
+50%          2.000000
+90%          3.000000
+95%          4.000000
+99%          4.000000
+max          8.000000
+Name: label_fail_H8h, dtype: float64
+per-machine pos rate describe:
+count    80610.000000
+mean         0.021863
+std          0.124503
+min          0.000000
+50%          0.000000
+90%          0.000000
+95%          0.000000
+99%          1.000000
+max          1.000000
+Name: label_fail_H8h, dtype: float64
+head(10):
+ machine_id  time_slice  slice_last_time_us  failed_count split  label_fail_H8h
+          4        2008        602530871574             1 train             NaN
+          4        2287        686252519087             0 train             NaN
+          4        6872       2061781875551             0 train             NaN
+          6        1078        323595709023             0 train             0.0
+          6        1770        531127155518             0 train             0.0
+          6        2054        616426140802             0 train             1.0
+          6        2142        642762537444             1 train             NaN
+          6        2382        714676243991             0 train             NaN
+          6        3271        981569939135             0 train             NaN
+          6        4763       1429033064420             0 train             NaN
+
+------------------------------------------------------------------------------------------
+[H=12h] file=D:\pycharmcode\GCT数据集-v2处理\01_interim\step2c_machine_slice_labeled_FAILonly_H12h_v2.csv
+{'H_hours': 12, 'rows_total': 341291, 'valid_rows': 168394, 'valid_rate': 0.4934029904099434, 'pos_count': 4213, 'pos_rate': 0.02501870612967208, 'train_valid_rows': 117753, 'train_pos_count': 2947, 'train_pos_rate': 0.02502696321962073, 'val_valid_rows': 16931, 'val_pos_count': 401, 'val_pos_rate': 0.02368436595593881, 'test_valid_rows': 33710, 'test_pos_count': 865, 'test_pos_rate': 0.025660041530703056, 'per_machine_valid_p50': 2.0, 'per_machine_valid_p90': 3.0, 'per_machine_posrate_p50': 0.0, 'per_machine_posrate_p90': 0.0}
+train/val/test stats:
+  train={'rows': 239105, 'valid_rows': 117753, 'valid_rate': 0.4924740176909726, 'pos_count': 2947, 'pos_rate': 0.02502696321962073}
+  val  ={'rows': 34041, 'valid_rows': 16931, 'valid_rate': 0.49737081754355045, 'pos_count': 401, 'pos_rate': 0.02368436595593881}
+  test ={'rows': 68145, 'valid_rows': 33710, 'valid_rate': 0.4946804607821557, 'pos_count': 865, 'pos_rate': 0.025660041530703056}
+per-machine valid sample count describe:
+count    80438.000000
+mean         2.093463
+std          0.937107
+min          1.000000
+50%          2.000000
+90%          3.000000
+95%          4.000000
+99%          4.000000
+max          8.000000
+Name: label_fail_H12h, dtype: float64
+per-machine pos rate describe:
+count    80438.000000
+mean         0.029917
+std          0.145558
+min          0.000000
+50%          0.000000
+90%          0.000000
+95%          0.200000
+99%          1.000000
+max          1.000000
+Name: label_fail_H12h, dtype: float64
+head(10):
+ machine_id  time_slice  slice_last_time_us  failed_count split  label_fail_H12h
+          4        2008        602530871574             1 train              NaN
+          4        2287        686252519087             0 train              NaN
+          4        6872       2061781875551             0 train              NaN
+          6        1078        323595709023             0 train              0.0
+          6        1770        531127155518             0 train              0.0
+          6        2054        616426140802             0 train              1.0
+          6        2142        642762537444             1 train              NaN
+          6        2382        714676243991             0 train              NaN
+          6        3271        981569939135             0 train              NaN
+          6        4763       1429033064420             0 train              NaN
