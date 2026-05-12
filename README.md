@@ -45,7 +45,14 @@ All preprocessing parameters are fitted on the training split only (train ∩ la
 
 ## Citation
 
-If you use this pipeline in your research, please cite our paper:
+If you use this pipeline in your research, please cite it as:
+
+Jung Fang, "GCT2019 Machine-Level Failure Prediction Pipeline", GitHub, 2026.  
+[https://github.com/skuramilk-gif/GCT2019-failure-prediction](https://github.com/skuramilk-gif/GCT2019-failure-prediction)
+
+For the raw dataset, please also cite:
+
+Google, "Google Cluster Trace 2019", available at [https://github.com/google/cluster-data](https://github.com/google/cluster-data)
 
 _\[Your Paper Title, Authors, Journal/Conference, Year]_
 ## Scope and Target Audience
