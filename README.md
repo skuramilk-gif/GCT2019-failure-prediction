@@ -8,7 +8,7 @@ The raw data used in this project is the **Google Borg Cluster Trace 2019**.
 Due to its size and license restrictions, it is not included in this repository.
 
 **To obtain the data:**
-- Download from Kaggle: [Google Borg Cluster Trace 2019](https://www.kaggle.com/datasets/derrickmwiti/google-borg-cluster-trace-2019)
+- Download from Kaggle: [Google Borg Cluster Trace 2019](https://www.kaggle.com/datasets/derrickmwiti/google-2019-cluster-sample)
 - Place the downloaded `Borg_Traces_2019.csv` file in the `00_raw/` directory.
 - The pipeline will automatically locate and process this file upon execution.
 
